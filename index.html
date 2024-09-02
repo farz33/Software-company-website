@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage with Background Banner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <style>
+
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 2rem;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav .btn-outline-primary {
+    margin-left: 15px;
+}
+
+.navbar a {
+  font-weight: bold;
+}
+
+/* Background Banner Section */
+.bg-banner {
+    background: url('tem.jpg') no-repeat center center/cover;
+    min-height: 60vh;
+    color: white;
+    padding-top: 50px;
+}
+
+.bg-banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+	color: black;
+}
+
+.bg-banner p {
+    margin-bottom: 30px;
+	color: black;
+}
+
+.learn-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #6f42c1;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.learn-more-button:hover {
+    background-color: #5a2d91;
+}
+
+
+.why-choose-us {
+  padding: 60px 0;
+  background: url('counter.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: #fff; /* Ensures text is readable on the background */
+}
+
+.why-choose-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+  z-index: 1;
+}
+
+.why-choose-us .container {
+  position: relative;
+  z-index: 2;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature {
+  width: 22%;
+  padding: 20px;
+  background-color: #fff;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #000000;
+  
+}
+
+.feature p {
+  font-size: 1em;
+  color: #333; /* Darker text for better readability */
+}
+
+
+     
+/* Base styles for the section */
+.services-section {
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional: background color */
+}
+
+.services-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services-text h2 {
+  font-size: 2rem; /* Adjust as needed */
+}
+
+.services-text p {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+.services-text img {
+  width: 100%; /* Make image responsive */
+  max-width: 800px; /* Limit maximum width */
+  height: auto;
+}
+
+/* Grid layout for services */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items */
+}
+
+.service-box {
+  flex: 1 1 calc(25% - 20px); /* Four items per row on desktop */
+  max-width: calc(25% - 20px); /* Ensure boxes don’t exceed container width */
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  padding: 10px;
+  background-color: #fff; /* Optional: background color */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.service-box img {
+  max-width: 100px; /* Adjust size of icons */
+  height: auto;
+}
+
+.service-box h3 {
+  font-size: 1.2rem; /* Adjust heading size */
+}
+
+.service-box p {
+  font-size: 0.9rem; /* Adjust paragraph size */
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .service-box {
+    flex: 1 1 100%; /* One item per row on mobile devices */
+    max-width: 100%; /* Ensure boxes use full width */
+  }
+
+  .services-text h2 {
+    font-size: 1.5rem; /* Adjust size for better mobile readability */
+  }
+
+  .services-text p {
+    font-size: 0.9rem; /* Adjust size for better mobile readability */
+  }
+
+  .services-text img {
+    max-width: 100%; /* Ensure image scales on mobile */
+  }
+
+  .service-box img {
+    max-width: 80px; /* Adjust icon size for mobile */
+  }
+
+  .service-box h3 {
+    font-size: 1rem; /* Adjust size for better mobile readability */
+  }
+
+  .service-box p {
+    font-size: 0.8rem; /* Adjust size for better mobile readability */
+  }
+}
+
+
+   .subscription-plans {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .plan {
+            border: 2px solid #6f42c1;
+            border-radius: 10px;
+            margin: 15px;
+            padding: 30px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .plan:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .plan h3 {
+            color: #6f42c1;
+            margin-bottom: 20px;
+        }
+        .plan-price {
+            font-size: 2rem;
+            color: #6f42c1;
+            margin-bottom: 20px;
+        }
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+        .plan-features li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .btn-plan {
+            background-color: #6f42c1;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn-plan:hover {
+            background-color: #5a3294;
+        }
+
+    html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #0A1172; /* Dark Blue */
+    color: white;
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex-basis: 30%;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section span {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+.footer-section .contact span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-section .contact i {
+    margin-right: 10px;
+}
+
+.footer-section .contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section .contact a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Base styles */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feature {
+  flex: 1 1 100%; /* Default to full width on small screens */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feature img {
+  max-width: 100px; /* Adjust icon size */
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 1.5rem; /* Adjust as needed */
+}
+
+.feature p {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+  .feature {
+    flex: 1 1 45%; /* Adjust to have two items per row on tablets */
+  }
+}
+
+@media (min-width: 992px) {
+  .feature {
+    flex: 1 1 22%; /* Adjust to have four items per row on desktops */
+  }
+}
+
+
+
+
+  
+  </style>
+  
+</head>
+<body>
+    <!-- Navbar -->
+   
+	<nav class="navbar navbar-expand-lg py-4 navigation header-padding " id="navbar">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="index.html">
+		  	<img src="tech.png" alt="" class="img-fluid">
+		  </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Banner Section -->
+    <section class="bg-banner d-flex align-items-center text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Empowering Ideas With Open Wave</h1>
+                    <p class="lead">OpenWave is a forward-thinking tech company specializing in innovative software solutions 
+					and digital transformation. With a focus on cutting-edge technology, 
+					OpenWave delivers services that drive business efficiency and growth. </p>
+                    <a href="about.html" class="learn-more-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="py-5 text-center" style="background-color: #f8f9fa;">
+    <div class="d-flex justify-content-around align-items-start flex-wrap">
+        <!-- Custom Effective Software Development -->
+        <div class="p-3" style="max-width: 300px;">
+         <i class="fa fa-address-card-o" style="font-size:48px;color:black"></i>
+            <h3 class="mt-3">Effective Software Development</h3>
+            
+        </div>
+        <!-- Analyze Your Expenses On Every Device -->
+        <div class="p-3" style="max-width: 300px;">
+            <i class="fa fa-cogs" style="font-size:48px;color:black"></i>
+            <h3 class="mt-3">Analyze Your Expenses </h3>
+           
+        </div>
+        <!-- Creating a Dedicated IT Business Growth -->
+        <div class="p-3" style="max-width: 300px;">
+          <i class="fa fa-compass" style="font-size:48px;color:black"></i>
+            <h3 class="mt-3">Creating a Dedicated IT Business Growth</h3>
+           
+        </div>
+    </div>
+</section>
+
+     
+	<section class="why-choose-us">
+    <div class="container">
+        <h2>Why Choose Us</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="quality.png" alt="Feature Icon 1">
+                <h3>Quality Service</h3>
+                <p>We provide top-notch service ensuring customer satisfaction every time.</p>
+            </div>
+            <div class="feature">
+                <img src="team.png" alt="Feature Icon 2">
+                <h3>Expert Team</h3>
+                <p>Our team is composed of highly skilled professionals with years of experience.</p>
+            </div>
+            <div class="feature">
+                <img src="hand.png" alt="Feature Icon 3">
+                <h3>Affordable Prices</h3>
+                <p>We offer competitive pricing without compromising on quality.</p>
+            </div>
+            <div class="feature">
+                <img src="price.png" alt="Feature Icon 4">
+                <h3>Customer Support</h3>
+                <p>We are always available to assist you with any queries or concerns.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <br><br>
+ <section class="services-section">
+    <div class="services-text">
+        <h2>We help you to make work easy</h2>
+        <p>We understand what your business means to you, your requirements considering trends.
+		</p>
+		<br>
+		<img src="comp.png" alt="Icon" style="width: 400px; height: auto;">
+    </div>
+    <div class="services-grid">
+        <div class="service-box">
+            <img src="data.png" alt="Icon" style="width: 150px; height: auto;">
+            <h3>Data Analysis</h3>
+            <p>We specialize in extracting meaningful patterns, trends</p>
+        </div>
+        <div class="service-box">
+            <img src="web.png" alt="Icon" style="width: 150px; height: auto;">
+            <h3>Web Development</h3>
+            <p>A complete web solution for business</p>
+        </div>
+        <div class="service-box">
+            <img src="soft.png" alt="Icon" style="width: 139px; height: auto;">
+            <h3>Software Development</h3>
+            <p>We focus on delivering high-quality software</p>
+        </div>
+        <div class="service-box">
+            <img src="mob.png" alt="Icon" style="width: 150px; height: auto;">
+            <h3>Cyber Security</h3>
+            <p>We specialize in safeguarding your systems</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="subscription-plans">
+    <h2 class="mb-5">Choose Your Plan</h2>
+    <div class="d-flex justify-content-around flex-wrap">
+        <div class="plan">
+            <h3>Basic Plan</h3>
+            <p class="plan-price">$29/month</p>
+            <ul class="plan-features">
+                <li>10 GB Storage</li>
+                <li>100 GB Bandwidth</li>
+                <li>24/7 Support</li>
+                <li>Free SSL Certificate</li>
+            </ul>
+            <a href="#" class="btn btn-plan">Get Started</a>
+        </div>
+        <div class="plan">
+            <h3>Standard Plan</h3>
+            <p class="plan-price">$49/month</p>
+            <ul class="plan-features">
+                <li>50 GB Storage</li>
+                <li>500 GB Bandwidth</li>
+                <li>Priority Support</li>
+                <li>Free Domain</li>
+            </ul>
+            <a href="#" class="btn btn-plan">Get Started</a>
+        </div>
+        <div class="plan">
+            <h3>Premium Plan</h3>
+            <p class="plan-price">$99/month</p>
+            <ul class="plan-features">
+                <li>Unlimited Storage</li>
+                <li>Unlimited Bandwidth</li>
+                <li>Dedicated Support</li>
+                <li>Custom Solutions</li>
+            </ul>
+            <a href="#" class="btn btn-plan">Get Started</a>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     
+     
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>
+                We provide innovative IT solutions to help businesses grow and succeed. Our services include software development, IT consulting, and business analytics.
+            </p>
+        </div>
+
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+               
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>
+                <span><i class="fas fa-phone"></i> +88 01672 506 744</span>
+            </p>
+            <p>
+                <span><i class="fas fa-envelope"></i> info@youritcompany.com</span>
+            </p>
+            <p>
+                <span><i class="fas fa-map-marker-alt"></i> 123 IT Street, Tech City</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+	
+	
+
+	
+</body>
+</html>

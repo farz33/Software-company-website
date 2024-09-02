@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Navbar with Banner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+	<style>
+	
+	.banner {
+  background-image: url('full.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust this height as needed */
+  position: relative;
+  opacity: 0.8; /* Make the banner image slightly transparent */
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+   font-size: 18px;
+  
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: white;
+  font-weight: bold; /* Make text bold */
+  margin-left: 20px; /* Add space between navbar items */
+}
+
+.navbar-brand {
+  font-size: 25px; /* Larger text for the brand */
+  margin-right: auto; /* Align the brand to the left */
+}
+
+.navbar-nav .nav-link:hover {
+  color: lightgray; /* Optional: Hover effect */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.about-image {
+    float: right;
+    max-width: 50%;
+    height: auto;
+    margin-left: 80px;
+}
+	
+.heading h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.text-color {
+  color: #6a1b9a; /* Purple color */
+}
+
+.counter-item .icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #6a1b9a; /* Purple color */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.counter-item h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.counter-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.honors-awards {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.honors-awards h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.honors-awards p {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.awards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.award-item {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+ html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    background-color: #0A1172; /* Dark Blue */
+    color: white;
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex-basis: 30%;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section span {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+.footer-section .contact span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-section .contact i {
+    margin-right: 10px;
+}
+
+.footer-section .contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section .contact a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+  
+
+.team-section {
+    padding: 40px 20px;
+}
+
+.team-header h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.team-header p {
+    font-size: 1.25rem;
+}
+
+.team-members {
+    gap: 20px;
+}
+
+.team-member {
+    width: 250px;
+    padding: 10px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+}
+
+.team-member p {
+    font-size: 1rem;
+}
+
+/* Base styles for the section */
+.honors-awards {
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional: background color */
+}
+
+.honors-awards h2 {
+  font-size: 2rem; /* Adjust as needed */
+  margin-bottom: 10px;
+}
+
+.honors-awards p {
+  font-size: 1rem; /* Adjust as needed */
+  margin-bottom: 20px;
+}
+
+.awards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items */
+}
+
+.award-item {
+  flex: 1 1 calc(20% - 20px); /* Five items per row on desktop */
+  max-width: calc(20% - 20px); /* Ensure boxes don’t exceed container width */
+  text-align: center;
+}
+
+.award-item img {
+  max-width: 100%; /* Make image responsive */
+  height: auto;
+}
+
+/* Media queries for tablets */
+@media (max-width: 992px) {
+  .award-item {
+    flex: 1 1 calc(25% - 20px); /* Four items per row on tablets */
+    max-width: calc(25% - 20px); /* Ensure boxes don’t exceed container width */
+  }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .award-item {
+    flex: 1 1 calc(50% - 20px); /* Two items per row on mobile devices */
+    max-width: calc(50% - 20px); /* Ensure boxes don’t exceed container width */
+  }
+
+  .honors-awards h2 {
+    font-size: 1.5rem; /* Adjust size for better mobile readability */
+  }
+
+  .honors-awards p {
+    font-size: 0.9rem; /* Adjust size for better mobile readability */
+  }
+}
+
+	
+	</style>
+	
+	
+</head>
+<body>
+
+<div class="banner">
+  <nav class="navbar navbar-expand-lg py-4 navigation header-padding" id="navbar">
+    <div class="container-fluid">
+     <img src="pro.png" alt="" class="img-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	
+	
+	<!-- Start Why Choose Us Section -->
+	    <br><br><br><br><br>
+		<section class="About Us">
+			<div class="container">
+			
+				<div class="row justify-content-between align-items-center">
+				<div class="about-content">
+            <img src="bl.jpg" alt="About Us Image" class="about-image">
+					<div class="col-lg-6">
+						<h2 class="section-title">About Us</h2>
+						<p>We are committed to delivering cutting-edge IT solutions that drive your business forward.
+						   With a passion for technology and innovation,
+						our team of skilled professionals is dedicated to providing top-tier services that meet 
+						the unique needs of each client.</p>
+
+						<div class="row my-5">
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="rep.png" alt="Image" width="150" height="80">
+									</div>
+									<h3>Our Mission</h3>
+									<p>Our mission is to empower businesses with innovative IT solutions </p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="circle.png" alt="Image" width="120" height="80">
+									</div>
+									<h3>Our Vision</h3>
+									<p>We envision a future where businesses of all sizes harness the full potential of technology to achieve their goals</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="rep.png" alt="Image" width="150" height="80">
+									</div>
+									<h3>Our Values</h3>
+									<p>We embrace the latest technologies to deliver solutions that are both innovative and practical.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="circle.png" alt="Image" width="120" height="80">
+									</div>
+									<h3>Our Excellence</h3>
+									<p>We strive for excellence in every project, delivering high-quality solutions</p>
+								</div>
+							</div>
+                      
+	                         </section>
+
+                           
+						   <section class="section">
+	<br><br><br>					   
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="heading text-center">
+          <h2>We help entrepreneurs <br>start up and turn <span class="text-color">their ideas into</span> products</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="counter-item counter--style text-center mb-5 mb-lg-0">
+              <div class="icon-circle">
+                <i class="bi bi-hand-thumbs-up"></i>
+              </div>
+              <h2 class="mb-0 mt-3"><span class="counter-stat font-weight-bold">1730</span> +</h2>
+              <p>Project Done</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="counter-item counter--style text-center mb-5 mb-lg-0">
+              <div class="icon-circle">
+                <i class="bi bi-emoji-smile"></i>
+              </div>
+              <h2 class="mb-0 mt-3"><span class="counter-stat font-weight-bold">125</span> M</h2>
+              <p>User Worldwide</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="counter-item counter--style text-center">
+              <div class="icon-circle">
+                <i class="bi bi-trophy"></i>
+              </div>
+              <h2 class="mb-0 mt-3"><span class="counter-stat font-weight-bold">14</span></h2>
+              <p>Award Winner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+         <br><br><br>
+		 <section class="honors-awards">
+  <div class="container text-center">
+    <h2>Our Honourable Clients</h2>
+    <p>
+      Our client is a forward-thinking organization dedicated to leveraging technology for strategic growth.
+    </p>
+    <div class="awards-grid">
+      <div class="award-item">
+        <img src="wal.png" alt="Brand 1" />
+      </div>
+      <div class="award-item">
+        <img src="info.png" alt="Brand 2" />
+      </div>
+      <div class="award-item">
+        <img src="dig.png" alt="Brand 3" />
+      </div>
+      <div class="award-item">
+        <img src="air.png" alt="Brand 4" />
+      </div>
+      <div class="award-item">
+        <img src="hun.png" alt="Brand 5" />
+      </div>
+    </div>
+  </div>
+</section>
+
+	
+	 <section class="team-section">
+        <div class="team-header text-center">
+            <h1>Meet Our Team</h1>
+            <p>We have a talented team of professionals ready to serve you.</p>
+        </div>
+        <section class="team-members d-flex flex-wrap justify-content-center">
+            <div class="team-member text-center">
+                <img src="rev.jpg" alt="Team Member 1" class="img-fluid rounded-circle">
+                <h3>Jessica Watson</h3>
+                <p>Lead Developer</p>
+            </div>
+            <div class="team-member text-center">
+                <img src="coat.jpg" alt="Team Member 2" class="img-fluid rounded-circle">
+                <h3>Peter Smith</h3>
+                <p>Designer</p>
+            </div>
+            <div class="team-member text-center">
+                <img src="ava.jpg" alt="Team Member 3" class="img-fluid rounded-circle">
+                <h3>Emily Johnson</h3>
+                <p>Project Manager</p>
+            </div>
+        </section>
+    </section>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+					
+          <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>
+                We provide innovative IT solutions to help businesses grow and succeed. Our services include software development, IT consulting, and business analytics.
+            </p>
+        </div>
+
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+               
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>
+                <span><i class="fas fa-phone"></i> +88 01672 506 744</span>
+            </p>
+            <p>
+                <span><i class="fas fa-envelope"></i> info@youritcompany.com</span>
+            </p>
+            <p>
+                <span><i class="fas fa-map-marker-alt"></i> 123 IT Street, Tech City</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+   
+    
+	
+	
+</body>
+</html>
