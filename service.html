@@ -235,7 +235,62 @@ p {
     color: #FFD700; /* Gold color on hover */
 }
 
+/* For mobile screens */
+    @media (max-width: 768px) {
+      .banner {
+        height: 300px;
+      }
 
+      .navbar-nav .nav-link {
+        margin-left: 10px;
+      }
+
+      .work-step-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .work-step-content.reverse {
+        flex-direction: column;
+      }
+
+      .work-step-content img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .work-step-text {
+        max-width: 100%;
+      }
+
+      .column {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      h1, h2, h4 {
+        font-size: 1.5em;
+      }
+    }
+
+  
+  
+}
+
+    /* For tablets */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .column {
+        max-width: 50%;
+      }
+
+      .work-step-content img {
+        width: 50%;
+      }
+
+      h1, h2 {
+        font-size: 2.5em;
+      }
+    }
   
   </style>
 </head>
