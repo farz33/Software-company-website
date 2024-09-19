@@ -272,6 +272,69 @@ form button:hover {
   }
 }
 
+ .burger.toggle .line4 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+
+ 
+ /* For mobile screens */
+@media (max-width: 768px) {
+  .banner {
+    height: 200px; /* Reduce the banner height */
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 10px; /* Adjust navbar item spacing */
+  }
+
+  .work-step-content {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+  }
+
+  .work-step-content.reverse {
+    flex-direction: column; /* Stack reverse content vertically */
+  }
+
+  .work-step-content img {
+    width: 100%; /* Full width for images on mobile */
+    margin-bottom: 20px; /* Add space below images */
+  }
+
+  .work-step-text {
+    max-width: 100%; /* Full width for text content */
+  }
+
+  .column {
+    max-width: 100%; /* Full width for columns */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  h1, h2, h4 {
+    font-size: 1.5em; /* Adjust font sizes for smaller screens */
+  }
+  
+  
+  
+}
+
+/* For tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .column {
+    max-width: 50%; /* Two columns per row on tablet */
+  }
+
+  .work-step-content img {
+    width: 50%; /* Reduce image size for tablet */
+  }
+
+  h1, h2 {
+    font-size: 2.5em; /* Adjust font sizes */
+  }
+}
+	  
  
 
 </style>
